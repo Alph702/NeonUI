@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Neon UI</title>
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/file-upload.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <a href="../../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="../index.html" class="sidebar-link">Introduction</a>
+                <a href="../tokens.html" class="sidebar-link">Design Tokens</a>
+                <a href="../utilities.html" class="sidebar-link">Utilities</a>
+            </div>
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="buttons.html" class="sidebar-link">Buttons</a>
+                <a href="forms.html" class="sidebar-link active">Forms</a>
+                <a href="feedback.html" class="sidebar-link">Feedback</a>
+                <a href="layout.html" class="sidebar-link">Layout</a>
+                <a href="navigation.html" class="sidebar-link">Navigation</a>
+                <a href="interactive.html" class="sidebar-link">Interactive</a>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Forms</h1>
+            <p class="docs-subtitle">Input fields, checkboxes, radios, and file uploads.</p>
+
+            <h2 class="section-title">Inputs</h2>
+            <div class="preview-box flex-col" style="align-items: stretch; max-width: 400px; margin: 2rem auto;">
+                <div class="form-group">
+                    <label class="label">Username</label>
+                    <input type="text" class="input" placeholder="Enter username">
+                </div>
+                <div class="form-group input-floating">
+                    <input type="email" class="input" placeholder=" " id="email-demo">
+                    <label for="email-demo">Email Address</label>
+                </div>
+            </div>
+            <pre><code class="language-html">&lt;!-- Standard Input --&gt;
+&lt;div class="form-group"&gt;
+    &lt;label class="label"&gt;Username&lt;/label&gt;
+    &lt;input type="text" class="input" placeholder="Enter username"&gt;
+&lt;/div&gt;
+
+&lt;!-- Floating Label --&gt;
+&lt;div class="form-group input-floating"&gt;
+    &lt;input type="email" class="input" placeholder=" " id="email"&gt;
+    &lt;label for="email"&gt;Email Address&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            <h2 class="section-title">Checkboxes & Radios</h2>
+            <div class="preview-box flex-col" style="align-items: flex-start;">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox-input" checked>
+                    <span>Subscribe to newsletter</span>
+                </label>
+                
+                <label class="radio-wrapper mt-1">
+                    <input type="radio" name="plan" class="radio-input" checked>
+                    <span>Free Plan</span>
+                </label>
+                <label class="radio-wrapper">
+                    <input type="radio" name="plan" class="radio-input">
+                    <span>Pro Plan</span>
+                </label>
+
+                <div class="flex-center gap-1 mt-2">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span>Notifications</span>
+                </div>
+            </div>
+            <pre><code class="language-html">&lt;!-- Checkbox --&gt;
+&lt;label class="checkbox-wrapper"&gt;
+    &lt;input type="checkbox" class="checkbox-input" checked&gt;
+    &lt;span&gt;Label Text&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;!-- Radio --&gt;
+&lt;label class="radio-wrapper"&gt;
+    &lt;input type="radio" name="group" class="radio-input"&gt;
+    &lt;span&gt;Label Text&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;!-- Switch --&gt;
+&lt;label class="switch"&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="slider"&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+
+            <h2 class="section-title">File Upload</h2>
+            <div class="preview-box">
+                <div class="file-upload-wrapper" style="width: 100%;">
+                    <input type="file" id="file-upload-demo" class="file-upload-input" hidden>
+                    <label for="file-upload-demo" class="file-upload-label glass">
+                        <div class="file-upload-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        </div>
+                        <div class="file-upload-text">Drag & Drop or Click to Upload</div>
+                        <div class="file-upload-info">Supports JPG, PNG, PDF (Max 5MB)</div>
+                    </label>
+                    <div class="file-preview glass"></div>
+                </div>
+            </div>
+            <pre><code class="language-html">&lt;div class="file-upload-wrapper"&gt;
+    &lt;input type="file" id="file-upload" class="file-upload-input" hidden&gt;
+    &lt;label for="file-upload" class="file-upload-label glass"&gt;
+        &lt;div class="file-upload-icon"&gt;
+            &lt;svg ...&gt;...&lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;div class="file-upload-text"&gt;Upload File&lt;/div&gt;
+    &lt;/label&gt;
+    &lt;div class="file-preview glass"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        </main>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <script src="../script.js"></script>
+    <script type="module" src="../../js/ui.js"></script>
+</body>
+</html>

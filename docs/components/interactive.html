@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive - Neon UI</title>
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/interactive.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <a href="../../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="../index.html" class="sidebar-link">Introduction</a>
+                <a href="../tokens.html" class="sidebar-link">Design Tokens</a>
+                <a href="../utilities.html" class="sidebar-link">Utilities</a>
+            </div>
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="buttons.html" class="sidebar-link">Buttons</a>
+                <a href="forms.html" class="sidebar-link">Forms</a>
+                <a href="feedback.html" class="sidebar-link">Feedback</a>
+                <a href="layout.html" class="sidebar-link">Layout</a>
+                <a href="navigation.html" class="sidebar-link">Navigation</a>
+                <a href="interactive.html" class="sidebar-link active">Interactive</a>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Interactive</h1>
+            <p class="docs-subtitle">Modals, dropdowns, and command palettes.</p>
+
+            <h2 class="section-title">Dropdowns</h2>
+            <div class="preview-box" style="height: 200px; align-items: flex-start;">
+                <div class="dropdown">
+                    <button class="btn btn-outline">Dropdown Menu ▼</button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item">Profile</div>
+                        <div class="dropdown-item">Settings</div>
+                        <div class="dropdown-item text-primary">Upgrade</div>
+                    </div>
+                </div>
+            </div>
+            <pre><code class="language-html">&lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-outline"&gt;Dropdown Menu ▼&lt;/button&gt;
+    &lt;div class="dropdown-menu"&gt;
+        &lt;div class="dropdown-item"&gt;Item 1&lt;/div&gt;
+        &lt;div class="dropdown-item"&gt;Item 2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <h2 class="section-title">Modals</h2>
+            <div class="preview-box">
+                <button class="btn btn-ghost" data-modal-target="demo-modal">Open Modal</button>
+            </div>
+            <pre><code class="language-html">&lt;button data-modal-target="my-modal"&gt;Open Modal&lt;/button&gt;
+
+&lt;div id="my-modal" class="modal-overlay"&gt;
+    &lt;div class="modal"&gt;
+        &lt;div class="modal-header"&gt;
+            &lt;h3&gt;Title&lt;/h3&gt;
+            &lt;button class="modal-close" data-modal-close&gt;&times;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <h2 class="section-title">Command Palette</h2>
+            <div class="preview-box">
+                <button class="btn btn-primary" onclick="document.dispatchEvent(new KeyboardEvent('keydown', {key: 'k', metaKey: true}))">
+                    Open Command Palette (Cmd+K)
+                </button>
+            </div>
+            <p class="text-muted mt-2">The command palette is automatically initialized by <code>command-palette.js</code>.</p>
+
+        </main>
+    </div>
+
+    <!-- Demo Modal -->
+    <div id="demo-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="text-large">Modal Title</h3>
+                <button class="modal-close" data-modal-close>&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-2">This is a futuristic modal with a glassmorphism overlay and smooth scale animation.</p>
+                <div class="flex gap-1" style="justify-content: flex-end;">
+                    <button class="btn btn-ghost" data-modal-close>Cancel</button>
+                    <button class="btn btn-primary" data-modal-close>Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay"></div>
+    <script src="../script.js"></script>
+    <script type="module" src="../../js/ui.js"></script>
+</body>
+</html>

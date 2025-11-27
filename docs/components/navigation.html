@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation - Neon UI</title>
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/navigation.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <a href="../../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="../index.html" class="sidebar-link">Introduction</a>
+                <a href="../tokens.html" class="sidebar-link">Design Tokens</a>
+                <a href="../utilities.html" class="sidebar-link">Utilities</a>
+            </div>
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="buttons.html" class="sidebar-link">Buttons</a>
+                <a href="forms.html" class="sidebar-link">Forms</a>
+                <a href="feedback.html" class="sidebar-link">Feedback</a>
+                <a href="layout.html" class="sidebar-link">Layout</a>
+                <a href="navigation.html" class="sidebar-link active">Navigation</a>
+                <a href="interactive.html" class="sidebar-link">Interactive</a>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Navigation</h1>
+            <p class="docs-subtitle">Navbars, sidebars, and menus.</p>
+
+            <h2 class="section-title">Navbar</h2>
+            <div class="preview-box">
+                <nav class="navbar glass" style="width: 100%; position: relative;">
+                    <div class="container flex-between">
+                        <div class="logo text-large text-primary">Logo</div>
+                        <ul class="nav-links flex gap-2">
+                            <li><a href="#" class="nav-link active">Home</a></li>
+                            <li><a href="#" class="nav-link">About</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <pre><code class="language-html">&lt;nav class="navbar glass sticky-top"&gt;
+    &lt;div class="container flex-between"&gt;
+        &lt;div class="logo text-large text-primary"&gt;Logo&lt;/div&gt;
+        &lt;ul class="nav-links flex gap-2"&gt;
+            &lt;li&gt;&lt;a href="#" class="nav-link active"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+            <h2 class="section-title">Sidebar</h2>
+            <p class="mb-2">The sidebar uses a fixed position and an overlay for mobile responsiveness.</p>
+            <pre><code class="language-html">&lt;div class="sidebar-overlay"&gt;&lt;/div&gt;
+&lt;aside class="sidebar glass"&gt;
+    &lt;div class="sidebar-header"&gt;
+        &lt;span class="text-large text-primary"&gt;Menu&lt;/span&gt;
+        &lt;button class="btn btn-icon btn-ghost" data-close-sidebar&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;nav class="sidebar-nav"&gt;
+        &lt;a href="#" class="sidebar-link active"&gt;Link 1&lt;/a&gt;
+        &lt;a href="#" class="sidebar-link"&gt;Link 2&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/aside&gt;</code></pre>
+
+        </main>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <script src="../script.js"></script>
+    <script type="module" src="../../js/ui.js"></script>
+</body>
+</html>

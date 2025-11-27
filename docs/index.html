@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon UI - Documentation</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/file-upload.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <link rel="stylesheet" href="../css/layout-components.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/interactive.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <a href="../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="index.html" class="sidebar-link">Introduction</a>
+                <a href="tokens.html" class="sidebar-link">Design Tokens</a>
+                <a href="utilities.html" class="sidebar-link">Utilities</a>
+            </div>
+            
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="components/buttons.html" class="sidebar-link">Buttons</a>
+                <a href="components/forms.html" class="sidebar-link">Forms</a>
+                <a href="components/feedback.html" class="sidebar-link">Feedback</a>
+                <a href="components/layout.html" class="sidebar-link">Layout</a>
+                <a href="components/navigation.html" class="sidebar-link">Navigation</a>
+                <a href="components/interactive.html" class="sidebar-link">Interactive</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-content">
+            <h1 class="docs-title">Introduction</h1>
+            <p class="docs-subtitle">Neon UI is a futuristic, glassmorphism-inspired component library built with pure HTML, CSS, and Vanilla JavaScript.</p>
+
+            <div class="alert alert-info mb-4">
+                <strong>Note:</strong> No build steps, no npm install required. Just copy and paste.
+            </div>
+
+            <h2 class="section-title">Quick Start</h2>
+            <p class="mb-2">To use Neon UI, simply include the CSS files in your <code>&lt;head&gt;</code> tag.</p>
+
+            <pre><code class="language-html">&lt;!-- Core Variables (Required) --&gt;
+&lt;link rel="stylesheet" href="css/variables.css"&gt;
+
+<!-- Reset & Utilities -->
+&lt;link rel="stylesheet" href="css/reset.css"&gt;
+&lt;link rel="stylesheet" href="css/utilities.css"&gt;
+
+<!-- Components -->
+&lt;link rel="stylesheet" href="css/components.css"&gt;
+&lt;link rel="stylesheet" href="css/forms.css"&gt;
+&lt;!-- ... include other component files as needed --&gt;</code></pre>
+
+            <h2 class="section-title">Core Concepts</h2>
+            
+            <h3 class="subsection-title">Glassmorphism</h3>
+            <p class="mb-2">Neon UI relies heavily on the <code>.glass</code> utility class to create depth and hierarchy.</p>
+            <div class="preview-box">
+                <div class="card glass p-4">
+                    <h3 class="text-medium mb-2">Glass Card</h3>
+                    <p class="text-muted">This element uses the glass effect.</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Neon Glow</h3>
+            <p class="mb-2">Primary actions and accents use a neon green glow defined in <code>--primary-color</code>.</p>
+            <div class="preview-box">
+                <button class="btn btn-primary ripple">Neon Button</button>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="sidebar-overlay"></div>
+    <script src="script.js"></script>
+    <script type="module" src="../js/ui.js"></script>
+</body>
+</html>

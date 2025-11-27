@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Neon UI</title>
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/feedback.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <a href="../../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="../index.html" class="sidebar-link">Introduction</a>
+                <a href="../tokens.html" class="sidebar-link">Design Tokens</a>
+                <a href="../utilities.html" class="sidebar-link">Utilities</a>
+            </div>
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="buttons.html" class="sidebar-link">Buttons</a>
+                <a href="forms.html" class="sidebar-link">Forms</a>
+                <a href="feedback.html" class="sidebar-link active">Feedback</a>
+                <a href="layout.html" class="sidebar-link">Layout</a>
+                <a href="navigation.html" class="sidebar-link">Navigation</a>
+                <a href="interactive.html" class="sidebar-link">Interactive</a>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Feedback</h1>
+            <p class="docs-subtitle">Alerts, toasts, and progress indicators.</p>
+
+            <h2 class="section-title">Alerts</h2>
+            <div class="preview-box flex-col" style="align-items: stretch;">
+                <div class="alert alert-success">Operation successful!</div>
+                <div class="alert alert-error">Something went wrong.</div>
+                <div class="alert alert-warning">Warning: Check your inputs.</div>
+                <div class="alert alert-info">New update available.</div>
+            </div>
+            <pre><code class="language-html">&lt;div class="alert alert-success"&gt;Operation successful!&lt;/div&gt;
+&lt;div class="alert alert-error"&gt;Something went wrong.&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;Warning: Check your inputs.&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;New update available.&lt;/div&gt;</code></pre>
+
+            <h2 class="section-title">Toasts</h2>
+            <div class="preview-box">
+                <button class="btn btn-primary" onclick="Toast.show('Hello from NeonUI!')">Show Toast</button>
+                <button class="btn btn-outline" onclick="Toast.show('Error occurred!', 'error')">Show Error Toast</button>
+            </div>
+            <pre><code class="language-javascript">// Requires toast.js
+Toast.show('Message here', 'success'); // 'success' is default
+Toast.show('Error message', 'error');</code></pre>
+
+            <h2 class="section-title">Progress Bars</h2>
+            <div class="preview-box flex-col" style="align-items: stretch;">
+                <div class="progress-wrapper">
+                    <div class="progress-label">
+                        <span>Loading</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+            <pre><code class="language-html">&lt;div class="progress-wrapper"&gt;
+    &lt;div class="progress-label"&gt;
+        &lt;span&gt;Loading&lt;/span&gt;
+        &lt;span&gt;75%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="progress-bar"&gt;
+        &lt;div class="progress-fill" style="width: 75%"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        </main>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <script src="../script.js"></script>
+    <script type="module" src="../../js/ui.js"></script>
+</body>
+</html>

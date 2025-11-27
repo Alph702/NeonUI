@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons - Neon UI</title>
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>☰</button>
+                <a href="../../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="../index.html" class="sidebar-link">Introduction</a>
+                <a href="../tokens.html" class="sidebar-link">Design Tokens</a>
+                <a href="../utilities.html" class="sidebar-link">Utilities</a>
+            </div>
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="buttons.html" class="sidebar-link active">Buttons</a>
+                <a href="forms.html" class="sidebar-link">Forms</a>
+                <a href="feedback.html" class="sidebar-link">Feedback</a>
+                <a href="layout.html" class="sidebar-link">Layout</a>
+                <a href="navigation.html" class="sidebar-link">Navigation</a>
+                <a href="interactive.html" class="sidebar-link">Interactive</a>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Buttons</h1>
+            <p class="docs-subtitle">Interactive elements for actions and navigation.</p>
+
+            <h2 class="section-title">Variants</h2>
+            <div class="preview-box">
+                <button class="btn btn-primary ripple">Primary</button>
+                <button class="btn btn-outline ripple">Outline</button>
+                <button class="btn btn-ghost ripple">Ghost</button>
+            </div>
+            <pre><code class="language-html">&lt;button class="btn btn-primary ripple"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline ripple"&gt;Outline&lt;/button&gt;
+&lt;button class="btn btn-ghost ripple"&gt;Ghost&lt;/button&gt;</code></pre>
+
+            <h2 class="section-title">Icon Buttons</h2>
+            <div class="preview-box">
+                <button class="btn btn-icon ripple" aria-label="Settings">⚙️</button>
+                <button class="btn btn-icon btn-outline ripple" aria-label="Edit">✏️</button>
+                <button class="btn btn-icon btn-ghost ripple" aria-label="Delete">🗑️</button>
+            </div>
+            <pre><code class="language-html">&lt;button class="btn btn-icon ripple" aria-label="Settings"&gt;⚙️&lt;/button&gt;</code></pre>
+
+            <h2 class="section-title">States</h2>
+            <h3 class="subsection-title">Loading</h3>
+            <div class="preview-box">
+                <button class="btn btn-primary is-loading">Loading</button>
+                <button class="btn btn-outline is-loading">Processing</button>
+            </div>
+            <pre><code class="language-html">&lt;button class="btn btn-primary is-loading"&gt;Loading&lt;/button&gt;</code></pre>
+
+            <h3 class="subsection-title">Disabled</h3>
+            <div class="preview-box">
+                <button class="btn btn-primary" disabled>Disabled</button>
+                <button class="btn btn-outline" disabled>Disabled</button>
+            </div>
+            <pre><code class="language-html">&lt;button class="btn btn-primary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+
+            <h2 class="section-title">JavaScript</h2>
+            <p class="mb-2">The <code>button.js</code> file handles the ripple effect automatically for any element with the <code>.ripple</code> class.</p>
+        </main>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <script src="../script.js"></script>
+    <script type="module" src="../../js/ui.js"></script>
+</body>
+</html>

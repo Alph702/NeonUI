@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout - Neon UI</title>
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout-components.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>☰</button>
+                <a href="../../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="../index.html" class="sidebar-link">Introduction</a>
+                <a href="../tokens.html" class="sidebar-link">Design Tokens</a>
+                <a href="../utilities.html" class="sidebar-link">Utilities</a>
+            </div>
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="buttons.html" class="sidebar-link">Buttons</a>
+                <a href="forms.html" class="sidebar-link">Forms</a>
+                <a href="feedback.html" class="sidebar-link">Feedback</a>
+                <a href="layout.html" class="sidebar-link active">Layout</a>
+                <a href="navigation.html" class="sidebar-link">Navigation</a>
+                <a href="interactive.html" class="sidebar-link">Interactive</a>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Layout</h1>
+            <p class="docs-subtitle">Structural components for organizing content.</p>
+
+            <h2 class="section-title">Cards</h2>
+            <div class="preview-box">
+                <div class="card" style="width: 100%; max-width: 400px;">
+                    <div class="card-header flex-between">
+                        <span>Project Alpha</span>
+                        <span class="badge badge-primary">Active</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-2">A futuristic project requiring high-end UI components and smooth animations.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary w-full">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <pre><code class="language-html">&lt;div class="card"&gt;
+    &lt;div class="card-header flex-between"&gt;
+        &lt;span&gt;Title&lt;/span&gt;
+        &lt;span class="badge badge-primary"&gt;Badge&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;p&gt;Content goes here...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer"&gt;
+        &lt;button class="btn btn-primary w-full"&gt;Action&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <h2 class="section-title">Tabs</h2>
+            <div class="preview-box">
+                <div class="card p-2 tabs-container" style="width: 100%;">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-target="#tab1">Account</button>
+                        <button class="tab-btn" data-target="#tab2">Security</button>
+                    </div>
+                    <div id="tab1" class="tab-content active">
+                        <h3 class="text-medium mb-1">Account Settings</h3>
+                        <p class="text-muted">Manage your profile information here.</p>
+                    </div>
+                    <div id="tab2" class="tab-content">
+                        <h3 class="text-medium mb-1">Security Settings</h3>
+                        <p class="text-muted">Update your password and 2FA.</p>
+                    </div>
+                </div>
+            </div>
+            <pre><code class="language-html">&lt;div class="tabs-container"&gt;
+    &lt;div class="tabs"&gt;
+        &lt;button class="tab-btn active" data-target="#tab1"&gt;Tab 1&lt;/button&gt;
+        &lt;button class="tab-btn" data-target="#tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id="tab1" class="tab-content active"&gt;Content 1&lt;/div&gt;
+    &lt;div id="tab2" class="tab-content"&gt;Content 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <h2 class="section-title">Tables</h2>
+            <div class="preview-box">
+                <div class="card p-0 table-container" style="width: 100%;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1001</td>
+                                <td>Alice Walker</td>
+                                <td><span class="badge badge-primary">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#1002</td>
+                                <td>Bob Smith</td>
+                                <td><span class="badge badge-secondary">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <pre><code class="language-html">&lt;div class="table-container"&gt;
+    &lt;table class="table"&gt;
+        &lt;thead&gt;...&lt;/thead&gt;
+        &lt;tbody&gt;...&lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+        </main>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <script src="../script.js"></script>
+    <script type="module" src="../../js/ui.js"></script>
+</body>
+</html>

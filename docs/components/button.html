@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons - Neon UI Docs</title>
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/utilities.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body>
+    <div class="docs-layout">
+        <main class="docs-content">
+            <h1>Buttons</h1>
+            <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
+
+            <h2>Variants</h2>
+            <div class="component-preview">
+                <div class="preview-body gap-2">
+                    <button class="btn btn-primary ripple">Primary</button>
+                    <button class="btn btn-outline ripple">Outline</button>
+                    <button class="btn btn-ghost ripple">Ghost</button>
+                </div>
+                <div class="preview-footer">
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+            <pre><code>&lt;button class="btn btn-primary ripple"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline ripple"&gt;Outline&lt;/button&gt;
+&lt;button class="btn btn-ghost ripple"&gt;Ghost&lt;/button&gt;</code></pre>
+
+            <h2>States</h2>
+            <div class="component-preview">
+                <div class="preview-body gap-2">
+                    <button class="btn btn-primary" disabled>Disabled</button>
+                    <button class="btn btn-primary is-loading">Loading</button>
+                </div>
+            </div>
+            <pre><code>&lt;button class="btn btn-primary" disabled&gt;Disabled&lt;/button&gt;
+&lt;button class="btn btn-primary is-loading"&gt;Loading&lt;/button&gt;</code></pre>
+
+            <h2>Icon Buttons</h2>
+            <div class="component-preview">
+                <div class="preview-body gap-2">
+                    <button class="btn btn-icon btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </button>
+                    <button class="btn btn-icon btn-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </button>
+                    <button class="btn btn-icon btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <pre><code>&lt;button class="btn btn-icon btn-primary"&gt;
+  &lt;svg ...&gt;...&lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+
+        </main>
+    </div>
+    <script src="../../js/components/button.js" type="module"></script>
+    <script src="../assets/docs.js"></script>
+</body>
+</html>

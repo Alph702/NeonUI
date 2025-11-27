@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Tokens - Neon UI</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .color-swatch {
+            width: 100%;
+            height: 100px;
+            border-radius: var(--border-radius);
+            margin-bottom: 0.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .token-card {
+            background: rgba(255,255,255,0.02);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>☰</button>
+                <a href="../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="index.html" class="sidebar-link">Introduction</a>
+                <a href="tokens.html" class="sidebar-link active">Design Tokens</a>
+                <a href="utilities.html" class="sidebar-link">Utilities</a>
+            </div>
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="components/buttons.html" class="sidebar-link">Buttons</a>
+                <a href="components/forms.html" class="sidebar-link">Forms</a>
+                <a href="components/feedback.html" class="sidebar-link">Feedback</a>
+                <a href="components/layout.html" class="sidebar-link">Layout</a>
+                <a href="components/navigation.html" class="sidebar-link">Navigation</a>
+                <a href="components/interactive.html" class="sidebar-link">Interactive</a>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Design Tokens</h1>
+            <p class="docs-subtitle">The core visual values that power Neon UI. Defined in <code>variables.css</code>.</p>
+
+            <h2 class="section-title">Colors</h2>
+            <div class="grid grid-3 gap-2">
+                <div class="token-card">
+                    <div class="color-swatch" style="background: var(--primary-color);"></div>
+                    <div class="text-medium">Primary</div>
+                    <code class="text-muted">--primary-color</code>
+                    <div class="text-small text-muted mt-1">#00ff00</div>
+                </div>
+                <div class="token-card">
+                    <div class="color-swatch" style="background: var(--primary-hover);"></div>
+                    <div class="text-medium">Primary Hover</div>
+                    <code class="text-muted">--primary-hover</code>
+                    <div class="text-small text-muted mt-1">#00cc00</div>
+                </div>
+                <div class="token-card">
+                    <div class="color-swatch" style="background: var(--background-dark);"></div>
+                    <div class="text-medium">Background Dark</div>
+                    <code class="text-muted">--background-dark</code>
+                    <div class="text-small text-muted mt-1">#000000</div>
+                </div>
+                <div class="token-card">
+                    <div class="color-swatch" style="background: var(--background-light);"></div>
+                    <div class="text-medium">Background Light</div>
+                    <code class="text-muted">--background-light</code>
+                    <div class="text-small text-muted mt-1">#0a0a0a</div>
+                </div>
+                <div class="token-card">
+                    <div class="color-swatch" style="background: var(--navbar-bg);"></div>
+                    <div class="text-medium">Navbar BG</div>
+                    <code class="text-muted">--navbar-bg</code>
+                    <div class="text-small text-muted mt-1">#0f0f0f</div>
+                </div>
+                <div class="token-card">
+                    <div class="color-swatch" style="background: var(--text-color);"></div>
+                    <div class="text-medium">Text Color</div>
+                    <code class="text-muted">--text-color</code>
+                    <div class="text-small text-muted mt-1">#ffffff</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Typography</h2>
+            <table class="props-table">
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Value</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="prop-name">--font-small</code></td>
+                        <td>clamp(0.8rem, 2vw, 1rem)</td>
+                        <td>Small text, captions</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">--font-medium</code></td>
+                        <td>clamp(1rem, 2.5vw, 1.2rem)</td>
+                        <td>Body text, standard labels</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">--font-large</code></td>
+                        <td>clamp(1.5rem, 3vw, 2rem)</td>
+                        <td>Section headers, card titles</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">--font-xlarge</code></td>
+                        <td>clamp(2rem, 4vw, 3rem)</td>
+                        <td>Hero titles, main headings</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="section-title">Spacing & Layout</h2>
+            <table class="props-table">
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="prop-name">--container-width</code></td>
+                        <td>90%</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">--max-container-width</code></td>
+                        <td>1920px</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">--container-padding</code></td>
+                        <td>20px</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">--border-radius</code></td>
+                        <td>10px</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>

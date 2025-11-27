@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilities - Neon UI</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar glass sticky-top" style="z-index: 101;">
+        <div class="container flex-between">
+            <div class="flex-center gap-2">
+                <button class="btn btn-icon btn-ghost" data-toggle-sidebar>☰</button>
+                <a href="../index.html" class="logo text-large text-primary animate-flicker" style="text-decoration: none;">NeonUI</a>
+            </div>
+            <ul class="nav-links flex gap-2">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link active">Docs</a></li>
+                <li><a href="https://github.com" class="nav-link">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-title">Getting Started</div>
+                <a href="index.html" class="sidebar-link">Introduction</a>
+                <a href="tokens.html" class="sidebar-link">Design Tokens</a>
+                <a href="utilities.html" class="sidebar-link active">Utilities</a>
+            </div>
+            <div class="sidebar-group">
+                <div class="sidebar-title">Components</div>
+                <a href="components/buttons.html" class="sidebar-link">Buttons</a>
+                <a href="components/forms.html" class="sidebar-link">Forms</a>
+                <a href="components/feedback.html" class="sidebar-link">Feedback</a>
+                <a href="components/layout.html" class="sidebar-link">Layout</a>
+                <a href="components/navigation.html" class="sidebar-link">Navigation</a>
+                <a href="components/interactive.html" class="sidebar-link">Interactive</a>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <h1 class="docs-title">Utilities</h1>
+            <p class="docs-subtitle">Helper classes for layout, spacing, and typography.</p>
+
+            <h2 class="section-title">Flexbox</h2>
+            <table class="props-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="prop-name">.flex</code></td>
+                        <td>display: flex</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.flex-col</code></td>
+                        <td>flex-direction: column</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.flex-center</code></td>
+                        <td>justify-content: center; align-items: center;</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.flex-between</code></td>
+                        <td>justify-content: space-between; align-items: center;</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.flex-wrap</code></td>
+                        <td>flex-wrap: wrap</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.gap-1</code></td>
+                        <td>gap: 10px</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.gap-2</code></td>
+                        <td>gap: 20px</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="section-title">Grid</h2>
+            <table class="props-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="prop-name">.grid</code></td>
+                        <td>display: grid</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.grid-2</code></td>
+                        <td>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.grid-3</code></td>
+                        <td>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="section-title">Typography</h2>
+            <div class="preview-box flex-col" style="align-items: flex-start;">
+                <p class="text-xlarge">.text-xlarge</p>
+                <p class="text-large">.text-large</p>
+                <p class="text-medium">.text-medium</p>
+                <p class="text-small">.text-small</p>
+                <p class="text-muted">.text-muted (Opacity 0.7)</p>
+                <p class="text-primary">.text-primary</p>
+                <p class="text-center w-full">.text-center</p>
+            </div>
+
+            <h2 class="section-title">Spacing (Margin/Padding)</h2>
+            <p class="mb-2">Utilities for margin (m) and padding (p). Scale: 1 = 10px, 2 = 20px, 3 = 30px, 4 = 40px.</p>
+            <table class="props-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Properties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="prop-name">.m-1</code>, <code class="prop-name">.p-1</code></td>
+                        <td>margin/padding: 10px</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.mt-1</code>, <code class="prop-name">.pt-1</code></td>
+                        <td>margin-top/padding-top: 10px</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.mb-2</code>, <code class="prop-name">.pb-2</code></td>
+                        <td>margin-bottom/padding-bottom: 20px</td>
+                    </tr>
+                    <tr>
+                        <td><code class="prop-name">.mx-auto</code></td>
+                        <td>margin-left: auto; margin-right: auto;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <div class="sidebar-overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>

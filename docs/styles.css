@@ -1,0 +1,233 @@
+/* Documentation Specific Styles */
+:root {
+    --sidebar-width: 280px;
+    --header-height: 60px;
+    --code-bg: #1a1a1a;
+    --code-color: #e0e0e0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Layout */
+.docs-layout {
+    display: flex;
+    min-height: calc(100vh - var(--header-height));
+    margin-top: var(--header-height);
+}
+
+/* Sidebar */
+.docs-sidebar {
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--header-height));
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    overflow-y: auto;
+    background: var(--background-dark);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 1rem;
+    z-index: 100;
+}
+
+.docs-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.sidebar-group {
+    margin-bottom: 2rem;
+}
+
+.sidebar-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted, #888);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--button-radius);
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-color);
+}
+
+.sidebar-link.active {
+    background: rgba(0, 255, 0, 0.1);
+    color: var(--primary-color);
+    border-left: 2px solid var(--primary-color);
+}
+
+/* Main Content */
+.docs-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 3rem 4rem;
+    max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+    .docs-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        width: 80%;
+    }
+
+    .docs-sidebar.open {
+        transform: translateX(0);
+    }
+
+    .docs-content {
+        margin-left: 0;
+        padding: 2rem 1rem;
+    }
+}
+
+/* Typography & Elements */
+.docs-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.docs-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted, #aaa);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--primary-color);
+}
+
+/* Code Blocks */
+pre {
+    background: var(--code-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    color: var(--code-color);
+    font-size: 0.9rem;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+pre:hover .copy-btn {
+    opacity: 1;
+}
+
+/* Component Preview */
+.preview-box {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    margin: 2rem 0 0;
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.preview-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    opacity: 0.5;
+}
+
+/* Props Table */
+.props-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.props-table th,
+.props-table td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.props-table th {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.props-table td {
+    color: var(--text-color);
+}
+
+.prop-name {
+    color: var(--primary-color);
+    font-family: monospace;
+}
+
+.prop-type {
+    color: #ff00ff;
+    font-family: monospace;
+    font-size: 0.85rem;
+}

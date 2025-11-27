@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations - Neon UI Docs</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+    <div class="docs-layout">
+        <main class="docs-content">
+            <h1>Animations</h1>
+            <p>Bring your interface to life with these drop-in animation classes.</p>
+
+            <div class="grid grid-2 gap-2">
+                <!-- Fade In -->
+                <div class="card p-2 glass">
+                    <h3>Fade In</h3>
+                    <p class="text-small text-muted mb-2"><code>.animate-fade-in</code></p>
+                    <div class="flex-center p-4 border rounded">
+                        <button class="btn btn-primary" onclick="replayAnimation(this, 'animate-fade-in')">Replay</button>
+                        <div class="box animate-fade-in ml-2"></div>
+                    </div>
+                </div>
+
+                <!-- Slide Up -->
+                <div class="card p-2 glass">
+                    <h3>Slide Up</h3>
+                    <p class="text-small text-muted mb-2"><code>.animate-slide-up</code></p>
+                    <div class="flex-center p-4 border rounded">
+                        <button class="btn btn-primary" onclick="replayAnimation(this, 'animate-slide-up')">Replay</button>
+                        <div class="box animate-slide-up ml-2"></div>
+                    </div>
+                </div>
+
+                <!-- Pulse -->
+                <div class="card p-2 glass">
+                    <h3>Pulse</h3>
+                    <p class="text-small text-muted mb-2"><code>.animate-pulse</code></p>
+                    <div class="flex-center p-4 border rounded">
+                        <div class="box animate-pulse"></div>
+                    </div>
+                </div>
+
+                <!-- Flicker -->
+                <div class="card p-2 glass">
+                    <h3>Neon Flicker</h3>
+                    <p class="text-small text-muted mb-2"><code>.animate-flicker</code></p>
+                    <div class="flex-center p-4 border rounded">
+                        <div class="text-large text-primary animate-flicker">NEON</div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .box {
+                    width: 50px;
+                    height: 50px;
+                    background: var(--primary-color);
+                    border-radius: 8px;
+                }
+            </style>
+
+            <script>
+                function replayAnimation(btn, animationClass) {
+                    const target = btn.nextElementSibling;
+                    target.classList.remove(animationClass);
+                    void target.offsetWidth; // trigger reflow
+                    target.classList.add(animationClass);
+                }
+            </script>
+
+        </main>
+    </div>
+    <script src="assets/docs.js"></script>
+</body>
+</html>
