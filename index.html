@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/file-upload.css">
     <link rel="stylesheet" href="css/feedback.css">
     <link rel="stylesheet" href="css/layout-components.css">
     <link rel="stylesheet" href="css/navigation.css">
@@ -99,6 +100,19 @@
                                     <span class="slider"></span>
                                 </label>
                                 <span>Notifications</span>
+                            </div>
+                        </div>
+
+                        <!-- File Uploader -->
+                        <div class="grid-col-span-2 mt-2" style="grid-column: span 2;">
+                            <div class="file-upload-wrapper">
+                                <input type="file" id="file-upload" class="file-upload-input" hidden>
+                                <label for="file-upload" class="file-upload-label glass">
+                                    <div class="file-upload-icon">☁️</div>
+                                    <div class="file-upload-text">Drag & Drop or Click to Upload</div>
+                                    <div class="file-upload-info">Supports JPG, PNG, PDF (Max 5MB)</div>
+                                </label>
+                                <div class="file-preview glass"></div>
                             </div>
                         </div>
                     </div>
