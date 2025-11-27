@@ -1,0 +1,199 @@
+/* Forms & Inputs */
+
+/* Text Inputs & Textareas */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: var(--font-small);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.input, .textarea, .select {
+    width: 100%;
+    padding: var(--input-padding);
+    background-color: var(--input-bg);
+    border: 1px solid #333;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: var(--font-medium);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input:focus, .textarea:focus, .select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.1);
+}
+
+.input::placeholder, .textarea::placeholder {
+    color: #555;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Floating Label Variant */
+.input-floating {
+    position: relative;
+}
+
+.input-floating .input {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.input-floating label {
+    position: absolute;
+    top: 50%;
+    left: var(--input-padding);
+    transform: translateY(-50%);
+    color: #777;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    font-size: var(--font-medium);
+}
+
+.input-floating .input:focus + label,
+.input-floating .input:not(:placeholder-shown) + label {
+    top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    transform: translateY(0);
+}
+
+/* Checkboxes */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--input-bg);
+    border: 1px solid #333;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkbox-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-input:checked::after {
+    content: '✔';
+    position: absolute;
+    color: var(--background-dark);
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Radios */
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--input-bg);
+    border: 1px solid #333;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.radio-input:checked {
+    border-color: var(--primary-color);
+}
+
+.radio-input:checked::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Toggles / Switches */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+    background-color: var(--background-dark);
+}

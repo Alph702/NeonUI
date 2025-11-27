@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonUI - Futuristic Component Library</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/layout-components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="navbar glass sticky-top">
+            <div class="container flex-between">
+                <div class="flex-center gap-2">
+                    <button class="btn btn-icon btn-ghost" data-toggle-sidebar>☰</button>
+                    <div class="logo text-large text-primary animate-flicker">NeonUI</div>
+                </div>
+                <ul class="nav-links flex gap-2">
+                    <li><a href="#buttons" class="nav-link">Components</a></li>
+                    <li><a href="#docs" class="nav-link">Docs</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container mt-4">
+            <section id="hero" class="text-center mb-4 animate-slide-up">
+                <h1 class="text-xlarge mb-2">Build the <span class="text-primary">Future</span></h1>
+                <p class="text-medium text-muted">A modern, futuristic UI library built with pure HTML, CSS, and JS.</p>
+            </section>
+
+            <section id="buttons" class="mb-4">
+                <h2 class="text-large mb-2 border-bottom">Buttons</h2>
+                <div class="card p-2 glass">
+                    <div class="flex flex-wrap gap-2">
+                        <button class="btn btn-primary ripple">Primary</button>
+                        <button class="btn btn-outline ripple">Outline</button>
+                        <button class="btn btn-ghost ripple">Ghost</button>
+                        <button class="btn btn-icon ripple" aria-label="Settings">⚙️</button>
+                        <button class="btn btn-primary is-loading">Loading</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="forms" class="mb-4">
+                <h2 class="text-large mb-2 border-bottom">Forms</h2>
+                <div class="card p-2 glass">
+                    <div class="grid grid-2 gap-2">
+                        <!-- Inputs -->
+                        <div>
+                            <div class="form-group">
+                                <label class="label">Username</label>
+                                <input type="text" class="input" placeholder="Enter username">
+                            </div>
+                            <div class="form-group input-floating">
+                                <input type="email" class="input" placeholder=" " id="email">
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">Bio</label>
+                                <textarea class="textarea autosize" placeholder="Tell us about yourself..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Toggles & Checks -->
+                        <div class="flex flex-col gap-2">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input" checked>
+                                <span>Subscribe to newsletter</span>
+                            </label>
+                            
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input">
+                                <span>I agree to terms</span>
+                            </label>
+
+                            <div class="mt-1">
+                                <label class="radio-wrapper mb-1">
+                                    <input type="radio" name="plan" class="radio-input" checked>
+                                    <span>Free Plan</span>
+                                </label>
+                                <label class="radio-wrapper">
+                                    <input type="radio" name="plan" class="radio-input">
+                                    <span>Pro Plan</span>
+                                </label>
+                            </div>
+
+                            <div class="flex-center gap-1 mt-1" style="justify-content: flex-start;">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Notifications</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="feedback" class="mb-4">
+                <h2 class="text-large mb-2 border-bottom">Feedback</h2>
+                <div class="card p-2 glass">
+                    <div class="grid grid-2 gap-2">
+                        <!-- Alerts -->
+                        <div>
+                            <div class="alert alert-success">Operation successful!</div>
+                            <div class="alert alert-error">Something went wrong.</div>
+                            <div class="alert alert-warning">Warning: Check your inputs.</div>
+                            <div class="alert alert-info">New update available.</div>
+                        </div>
+
+                        <!-- Interactive -->
+                        <div class="flex flex-col gap-2">
+                            <button class="btn btn-primary" onclick="Toast.show('Hello from NeonUI!')">Show Toast</button>
+                            <button class="btn btn-outline" onclick="Toast.show('Error occurred!', 'error')">Show Error Toast</button>
+                            <button class="btn btn-ghost" data-modal-target="demo-modal">Open Modal</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modals -->
+        <div id="demo-modal" class="modal-overlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3 class="text-large">Modal Title</h3>
+                    <button class="modal-close" data-modal-close>&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-2">This is a futuristic modal with a glassmorphism overlay and smooth scale animation.</p>
+                    <div class="flex gap-1" style="justify-content: flex-end;">
+                        <button class="btn btn-ghost" data-modal-close>Cancel</button>
+                        <button class="btn btn-primary" data-modal-close>Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="layout" class="container mb-4">
+            <h2 class="text-large mb-2 border-bottom">Data & Layout</h2>
+            
+            <div class="grid grid-2 gap-2 mb-4">
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-header flex-between">
+                        <span>Project Alpha</span>
+                        <span class="badge badge-primary">Active</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-2">A futuristic project requiring high-end UI components and smooth animations.</p>
+                        <div class="progress-wrapper">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary w-full">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="card p-2 tabs-container">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-target="#tab1">Account</button>
+                        <button class="tab-btn" data-target="#tab2">Security</button>
+                        <button class="tab-btn" data-target="#tab3">Billing</button>
+                    </div>
+                    <div id="tab1" class="tab-content active">
+                        <h3 class="text-medium mb-1">Account Settings</h3>
+                        <p class="text-muted">Manage your profile information here.</p>
+                    </div>
+                    <div id="tab2" class="tab-content">
+                        <h3 class="text-medium mb-1">Security Settings</h3>
+                        <p class="text-muted">Update your password and 2FA.</p>
+                    </div>
+                    <div id="tab3" class="tab-content">
+                        <h3 class="text-medium mb-1">Billing Details</h3>
+                        <p class="text-muted">View your invoices and payment methods.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="card p-0 table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>User</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>Alice Walker</td>
+                            <td><span class="badge badge-primary">Completed</span></td>
+                            <td>2025-11-01</td>
+                        </tr>
+                        <tr>
+                            <td>#1002</td>
+                            <td>Bob Smith</td>
+                            <td><span class="badge badge-secondary">Pending</span></td>
+                            <td>2025-11-02</td>
+                        </tr>
+                        <tr>
+                            <td>#1003</td>
+                            <td>Charlie Day</td>
+                            <td><span class="badge badge-primary">Completed</span></td>
+                            <td>2025-11-03</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+            </div>
+        </section>
+
+        <section id="interactive" class="container mb-4">
+            <h2 class="text-large mb-2 border-bottom">Interactive</h2>
+            <div class="card p-2 glass">
+                <div class="flex flex-wrap gap-2 align-center">
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline">Dropdown Menu ▼</button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item">Profile</div>
+                            <div class="dropdown-item">Settings</div>
+                            <div class="dropdown-item text-primary">Upgrade</div>
+                        </div>
+                    </div>
+
+                    <!-- Command Palette Trigger -->
+                    <button class="btn btn-primary" onclick="document.dispatchEvent(new KeyboardEvent('keydown', {key: 'k', metaKey: true}))">
+                        Open Command Palette (Cmd+K)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <div class="sidebar-overlay"></div>
+        <aside class="sidebar glass">
+            <div class="sidebar-header">
+                <span class="text-large text-primary">Menu</span>
+                <button class="btn btn-icon btn-ghost" data-close-sidebar>&times;</button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#hero" class="sidebar-link active" data-close-sidebar>Home</a>
+                <a href="#buttons" class="sidebar-link" data-close-sidebar>Components</a>
+                <a href="#forms" class="sidebar-link" data-close-sidebar>Forms</a>
+                <a href="#feedback" class="sidebar-link" data-close-sidebar>Feedback</a>
+                <a href="#layout" class="sidebar-link" data-close-sidebar>Layout</a>
+                <a href="#" class="sidebar-link" data-close-sidebar>Settings</a>
+            </nav>
+        </aside>
+
+        <footer class="footer mt-4 p-2 text-center text-muted">
+            &copy; 2025 NeonUI. All rights reserved.
+        </footer>
+    </div>
+
+    <script type="module" src="js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+:root {
+  --primary-color: #00ff00;
+  --primary-hover: #00cc00;
+  --background-dark: #000000;
+  --background-light: #0a0a0a;
+  --navbar-bg: #0f0f0f;
+  --text-color: #ffffff;
+  --border-color: #fffaff;
+  --input-bg: #101010;
+  --input-border: #ececec;
+  --footer-text: #dfe6df;
+
+  --container-width: 90%;
+  --form-width: 80%;
+  --max-container-width: 1920px;
+  --max-width: 100vw;
+
+  --max-height: 100vh;
+
+  --container-padding: 20px;
+  --button-padding: 10px 15px;
+  --input-padding: 10px;
+  --navbar-padding: 10px;
+  --footer-padding: 10px;
+
+  --input-margin: 10px 0;
+
+  --border-radius: 10px;
+  --button-radius: 5px;
+
+  --font-small: clamp(0.8rem, 2vw, 1rem);
+  --font-medium: clamp(1rem, 2.5vw, 1.2rem);
+  --font-large: clamp(1.5rem, 3vw, 2rem);
+  --font-xlarge: clamp(2rem, 4vw, 3rem);
+
+  --shadow: rgba(0, 255, 0, 0.3);
+  --hover-shadow: rgba(0, 255, 0, 0.5);
+}
